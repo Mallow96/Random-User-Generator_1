@@ -23,25 +23,19 @@ const returnGreeting = () => {
 
 btnMale.addEventListener("click", () => {
   viewControl = "male";
-
   exitGreeting();
-
   maleView.classList.remove("hidden");
 });
 
 btnFemale.addEventListener("click", () => {
   viewControl = "female";
-
   exitGreeting();
-
   femaleView.classList.remove("hidden");
 });
 
 btnBoth.addEventListener("click", () => {
   viewControl = "both";
-
   exitGreeting();
-
   bothView.classList.remove("hidden");
 });
 
