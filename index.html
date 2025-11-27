@@ -5,25 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>隨機交友</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style></style>
   </head>
   <body>
-    <div class="greeting-container h-screen flex items-center justify-center">
+    <div
+      id="greeting-view"
+      class="greeting-container h-screen flex items-center justify-center"
+    >
       <div
-        class="greeting-card px-24 py-16 flex flex-col gap-y-6 border border-fuchsia-500 rounded-4xl"
+        class="greeting-card bg-pink-100 px-24 py-16 flex flex-col gap-y-6 border border-fuchsia-500 rounded-4xl"
       >
-        <h2 class="text-5xl text-center">你想要找的是：</h2>
+        <h1 class="text-5xl text-center text-violet-600 mb-12">LOGO HERE</h1>
+        <h2 class="text-3xl text-center mb-6">歡迎來到隨機交友！</h2>
+        <h3 class="text-2xl">你想要找的是：</h3>
+
         <div class="button-groups text-2xl flex justify-center gap-8">
-          <button class="text-white bg-sky-600 px-4 py-1 rounded-lg">
+          <button
+            id="btnMale"
+            class="transition-all text-white bg-sky-600 px-4 py-1 rounded-lg hover:bg-sky-400 hover:text-gray-200 shadow-md cursor-pointer active:inset-shadow-sm active:scale-95 active:bg-sky-500"
+          >
             男生
           </button>
-          <button class="text-white bg-red-300 px-4 py-1 rounded-lg">
+          <button
+            id="btnFemale"
+            class="transition-all text-white bg-red-300 px-4 py-1 rounded-lg hover:bg-red-200 hover:text-gray-400 shadow-md cursor-pointer active:inset-shadow-sm active:scale-95 active:bg-red-300"
+          >
             女生
           </button>
-          <button class="text-white bg-lime-600 px-4 py-1 rounded-lg">
+          <button
+            id="btnBoth"
+            class="transition-all text-white bg-lime-600 px-4 py-1 rounded-lg hover:bg-lime-400 hover:text-gray-400 shadow-md cursor-pointer active:inset-shadow-sm active:scale-95 active:bg-lime-500"
+          >
             全部隨機
           </button>
         </div>
       </div>
     </div>
+
+    <button
+      id="btnBack"
+      class="hidden transition-all text-white bg-gray-600 px-4 py-1 rounded-lg hover:bg-gray-400 shadow-md cursor-pointer active:inset-shadow-sm active:scale-95 active:bg-gray-500"
+    >
+      Back
+    </button>
+
+    <div id="male-view" class="hidden">
+      <p>this is male</p>
+    </div>
+
+    <div id="female-view" class="hidden">
+      <p>this is female</p>
+    </div>
+
+    <div id="both-view" class="hidden">
+      <p>this is both</p>
+    </div>
+
+    <script src="./script.js"></script>
   </body>
 </html>
