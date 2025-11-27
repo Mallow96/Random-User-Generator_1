@@ -3,7 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>隨機交友</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
-  <body></body>
+  <body>
+    <div class="greeting-container h-screen flex items-center justify-center">
+      <div
+        class="greeting-card px-24 py-16 flex flex-col gap-y-6 border border-fuchsia-500 rounded-4xl"
+      >
+        <h2 class="text-5xl text-center">你想要找的是：</h2>
+        <div class="button-groups text-2xl flex justify-center gap-8">
+          <button class="text-white bg-sky-600 px-4 py-1 rounded-lg">
+            男生
+          </button>
+          <button class="text-white bg-red-300 px-4 py-1 rounded-lg">
+            女生
+          </button>
+          <button class="text-white bg-lime-600 px-4 py-1 rounded-lg">
+            全部隨機
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
