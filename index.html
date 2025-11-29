@@ -8,7 +8,7 @@
 
     <style></style>
   </head>
-  <body>
+  <body class="relative">
     <div
       id="greeting-view"
       class="greeting-container h-screen flex items-center justify-center"
@@ -43,23 +43,38 @@
       </div>
     </div>
 
-    <div class="btns">
-      <button
-        id="btnBack"
-        class="hidden transition-all text-white bg-gray-600 px-4 py-1 rounded-lg hover:bg-gray-400 shadow-md cursor-pointer active:inset-shadow-sm active:scale-95 active:bg-gray-500"
-      >
-        Back
-      </button>
+    <div id="results" class="hidden container mx-auto mb-6">
+      <div class="btns my-2 flex justify-between">
+        <button
+          id="btnBack"
+          class="transition-all text-white bg-gray-600 px-4 py-1 rounded-lg hover:bg-gray-400 shadow-md cursor-pointer active:inset-shadow-sm active:scale-95 active:bg-gray-500"
+        >
+          返回
+        </button>
 
-      <button
-        id="btnAgain"
-        class="hidden transition-all text-white bg-gray-400 px-4 py-1 rounded-lg hover:bg-gray-300 shadow-md cursor-pointer active:inset-shadow-sm active:scale-95 active:bg-gray-400"
-      >
-        Try Again
-      </button>
+        <button
+          id="btnAgain"
+          class="transition-all text-white bg-gray-400 px-4 py-1 rounded-lg hover:bg-gray-300 shadow-md cursor-pointer active:inset-shadow-sm active:scale-95 active:bg-gray-400"
+        >
+          重新推薦
+        </button>
+      </div>
+
+      <div
+        id="profile-grid"
+        class="grid 2xl:grid-cols-6 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 gap-4"
+      ></div>
     </div>
 
-    <div id="profile-grid" class="grid grid-cols-6 gap-4"></div>
+    <footer id="footer" class="w-full bg-gray-100 absolute bottom-0">
+      <p class="text-center py-3">
+        本專案使用 Random API 提供的
+        <a href="https://randomuser.me/" class="underline"
+          >Random User Generator</a
+        >
+        製作
+      </p>
+    </footer>
 
     <script src="./script.js"></script>
   </body>

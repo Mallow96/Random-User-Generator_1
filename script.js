@@ -1,8 +1,7 @@
 const greetingView = document.getElementById("greeting-view");
-const maleView = document.getElementById("male-view");
-const femaleView = document.getElementById("female-view");
-const bothView = document.getElementById("both-view");
+const results = document.getElementById("results");
 const profileGrid = document.getElementById("profile-grid");
+const footer = document.getElementById("footer");
 
 const btnBack = document.getElementById("btnBack");
 const btnAgain = document.getElementById("btnAgain");
@@ -18,16 +17,20 @@ let currentIndex = 0;
 //轉頁面
 const exitGreeting = () => {
   greetingView.classList.add("hidden");
-  btnBack.classList.remove("hidden");
-  btnAgain.classList.remove("hidden");
+
+  results.classList.remove("hidden");
+
+  footer.classList.remove("absolute", "bottom-0");
 
   fetchUsers();
 };
 
 const returnGreeting = () => {
   greetingView.classList.remove("hidden");
-  btnBack.classList.add("hidden");
-  btnAgain.classList.add("hidden");
+
+  results.classList.add("hidden");
+
+  footer.classList.add("absolute", "bottom-0");
 
   viewControl = null;
 };
