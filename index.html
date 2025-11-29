@@ -14,7 +14,7 @@
       class="greeting-container h-screen flex items-center justify-center"
     >
       <div
-        class="greeting-card bg-pink-100 px-24 py-16 flex flex-col gap-y-6 border border-fuchsia-500 rounded-4xl"
+        class="greeting-card bg-pink-100 px-24 py-16 flex flex-col gap-y-6 border border-fuchsia-300 rounded-4xl"
       >
         <h1 class="text-5xl text-center text-violet-600 mb-12">LOGO HERE</h1>
         <h2 class="text-3xl text-center mb-6">歡迎來到隨機交友！</h2>
@@ -43,24 +43,23 @@
       </div>
     </div>
 
-    <button
-      id="btnBack"
-      class="hidden transition-all text-white bg-gray-600 px-4 py-1 rounded-lg hover:bg-gray-400 shadow-md cursor-pointer active:inset-shadow-sm active:scale-95 active:bg-gray-500"
-    >
-      Back
-    </button>
+    <div class="btns">
+      <button
+        id="btnBack"
+        class="hidden transition-all text-white bg-gray-600 px-4 py-1 rounded-lg hover:bg-gray-400 shadow-md cursor-pointer active:inset-shadow-sm active:scale-95 active:bg-gray-500"
+      >
+        Back
+      </button>
 
-    <div id="male-view" class="hidden">
-      <p>this is male</p>
+      <button
+        id="btnAgain"
+        class="hidden transition-all text-white bg-gray-400 px-4 py-1 rounded-lg hover:bg-gray-300 shadow-md cursor-pointer active:inset-shadow-sm active:scale-95 active:bg-gray-400"
+      >
+        Try Again
+      </button>
     </div>
 
-    <div id="female-view" class="hidden">
-      <p>this is female</p>
-    </div>
-
-    <div id="both-view" class="hidden">
-      <p>this is both</p>
-    </div>
+    <div id="profile-grid" class="grid grid-cols-6 gap-4"></div>
 
     <script src="./script.js"></script>
   </body>
