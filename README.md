@@ -1,26 +1,26 @@
 # Random User Generator 👤
 
-這是一個結合了 **Tailwind CSS** 與 **Alpine.js** 的輕量級網頁應用程式。透過串接隨機使用者 API，實現了即時資料獲取與動態性別背景切換功能。
+這是一個使用 **原生 JavaScript** 結合 **Tailwind CSS** 開發的隨機使用者產生器。透過串接真實 API 資料，實現了動態資料渲染與即時背景顏色切換功能。
 
 ## 🌟 功能亮點
-* **現代化 UI 設計**：利用 **Tailwind CSS** 的 Utility-first 特性，快速構建出具備圓角、陰影與響應式佈局的介面。
-* **輕量級交互**：使用 **Alpine.js** 處理組件狀態與按鈕點擊事件，讓 JavaScript 與 HTML 的互動更直觀。
-* **動態性別視覺回饋**：
-  * 當產生的使用者為 **男性** 時，背景色切換為深藍色 (`#33739a`)。
-  * 當產生的使用者為 **女性** 時，背景色切換為深紫色 (`#663399`)。
-* **API 非同步整合**：使用原生 `fetch` API 處理非同步資料流，即時更新使用者照片、姓名、聯繫方式。
+* **即時 API 串接**：點擊按鈕後發送非同步請求至 `randomuser.me`，獲取包含姓名、照片、聯繫方式等完整資料。
+* **動態性別視覺切換**：
+  * **男性 (Male)**：背景顏色切換為深藍色 (`bg-blue-800` 對應色值)。
+  * **女性 (Female)**：背景顏色切換為深紫色 (`bg-purple-800` 對應色值)。
+* **現代化 UI**：利用 **Tailwind CSS** 的 Utility-first 類別，快速實現響應式卡片佈局、陰影效果與圓角設計。
+* **純原生邏輯**：不依賴大型框架，完全使用原生 DOM API 進行元素選取與內容更新。
 
 ## 🛠 技術棧 (Tech Stack)
-* **CSS Framework**: [Tailwind CSS](https://tailwindcss.com/) (CDN 版本)
-* **JS Framework**: [Alpine.js](https://alpinejs.dev/) (用於處理基礎狀態)
-* **Core Logic**: Vanilla JavaScript (ES6)
-* **Data Source**: [Random User API](https://randomuser.me/)
+* **核心語言**: JavaScript (ES6+)
+* **CSS 框架**: [Tailwind CSS](https://tailwindcss.com/) (CDN 版本)
+* **資料來源**: [Random User Generator API](https://randomuser.me/)
 
-## 📁 檔案說明
-* `index.html`: 包含主要的 UI 結構、Tailwind 樣式類別以及 Alpine.js 指令。
-* `script.js`: 負責處理 `fetch` 請求邏輯與 DOM 的動態渲染。
-
-GitHub Page: https://mallow96.github.io/Random-User-Generator_1/
+## 📁 檔案結構說明
+* `index.html`: 定義應用程式結構，並透過 Tailwind 類別處理視覺樣式。
+* `script.js`: 
+  * 負責執行 `fetch` 網路請求。
+  * 處理資料解構與 DOM 節點更新。
+  * 包含性別判斷邏輯，動態修改 `document.body` 樣式。
 
 複製儲存庫：
    ```bash
